@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2?family= Inter: wght @500 & display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <div class="mobileMenuBackground"></div>
+    <div class="wrapper">
+        <header id="header" class="header">
+            <div class="headerWrapper">
+                <div class="headerContainer">
+                    <div class="logo">
+                        <span class="namelogo">BestHntArt</span>
+                    </div>
+                    <!-- <div class="navBurger">
+                        <span></span>
+                    </div> -->
+                    <button id="mobileNavigation" type="button">
+                        <i class="fa-solid fa-bars hamburgerIcon"></i>
+                    </button>
+                    <div class="headerSearch">
+                        <form autocomplete="off" action="" method="get">
+                            <fieldset class="fs-nf">
+                                <div class="searchBarContainer">
+                                    <label for="search">
+                                        <input class="seatchInput" type="text" value placeholder="Поиск"
+                                            autocomplete="off" style="color: #ffffff;">
+                                    </label>
+                                    <button class="searchButton">
+                                        <svg width="95%" height="95%" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="5" cy="5" r="4.5" stroke="#838592" />
+                                            <line x1="8.35355" y1="8.64645" x2="14.3536" y2="14.6464"
+                                                stroke="#838592" />
+                                        </svg>
+                                        <!-- <i class="fa fa-search fa-1x" style="color: rgb(79, 80, 85);"></i> -->
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="notificationIcon">
+                        <div>
+                            <i class="fa-solid fa-bell" style="color:white;"></i>
+                            <i class="fa-solid fa-heart" style="color:white;"></i>
+                        </div>
+                    </div>
+
+                    <div class="profile">
+                        <img class="smallAvatar" src="image/avatar.png" alt="Аватар">
+                        <ul class="profileDropdown">
+                            <li><span><a href="#" class="profileDropdownLink"><i class="fa-solid fa-user"></i>Мой
+                                        профиль</a></span></li>
+                            <li><span><a href="#" class="profileDropdownLink"><i
+                                            class="fa-solid fa-heart"></i>Лайки</a></span></li>
+                            <li><span><a href="#" class="profileDropdownLink"><i
+                                            class="fa-solid fa-bell"></i>Уведомления</a></span></li>
+                            <li><span><a href="#" class="profileDropdownLink"><i
+                                            class="fa-solid fa-user-group"></i>Подписки</a></span></li>
+                            <li><span><a href="#" class="profileDropdownLink"><i class="fa-solid fa-clipboard"></i>Мои
+                                        посты</a></span></li>
+                            <li><span><a href="#" class="profileDropdownLink"><i
+                                            class="fa-solid fa-user-xmark"></i>Игнор-лист</a></span></li>
+                            <li style="border-top: solid 1px rgb(206, 206, 206);"><span><a href="#"
+                                        class="profileDropdownLink"><i class="fa-solid fa-gear"></i>Настройки</a></span>
+                            </li>
+                            <li><span><a href="#" class="profileDropdownLink" style="color:red;"><i
+                                            class="fa-solid fa-right-from-bracket"></i>Выход</a></span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <nav class="headerNav">
+                <ul class="navMenu">
+                    <li><a href="index.html"><span class="itemName">Home</span></a></li>
+                    <li><a href=""><span class="itemName">Posts</span></a></li>
+                    <li><a href="images.html"><span class="itemName">Images</span></a></li>
+                    <li><a href=""><span class="itemName">Videos</span></a></li>
+                    <li><a href=""><span class="itemName">Cosplay</span></a></li>
+                    <li><a href=""><span class="itemName">Casual</span></a></li>
+                    <li><a href=""><span class="itemName">18+</span></a></li>
+                </ul>
+            </nav>
+            <!-- <div class="block">
+                <div class="block__row">
+                    <div class="block__column bl1">
+                        <div class="block__item">
+                            1
+                        </div>
+                    </div>
+                    <div class="block__column bl2">
+                        <div class="block__item">
+                            2
+                        </div>
+                    </div>
+                    <div class="block__column bl3">
+                        <div class="block__item">
+                            3
+                        </div>
+                    </div>
+                    <div class="block__column bl4">
+                        <div class="block__item">
+                            4
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </header>
+        <main class="page">
+            <div class="page__inner">
+                <div class="page__wrapper">
+                    <div class="containerGallery">
+                        <div class="sectionTitle">
+                            <a href="" class="sectionTitleLink">Popular arts<i
+                                    class="fa-solid fa-caret-right arrow"></i></a>
+                        </div>
+                        <section id="gallery" class="no-gutter-sizer">
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent7.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent1.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent2.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent3.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent4.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent5.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent6.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent8.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent9.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent10.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent11.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent12.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent13.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent14.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent15.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item-masonry sizer4">
+                                <img src="image/post/hent16.jpg">
+                                <div class="cover-item-gallery">
+                                    <a href="">
+                                        <i class="fa fa-search fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- <div class="container">
+            <div class="subContainer">
+                <div class="sectionTitle">
+                    <a class="sectionTitleLink">Popular arts<span class="arrow"><i></i></span></a>
+                </div>
+                <div class="containerPopularArts">
+                    <div class="arts_image"><a href=""><img src="image/post/hent1.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent2.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent3.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent10.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent4.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent5.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent6.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent7.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent8.jpg"></a></div>
+                    <div class="arts_image"><a href=""><img src="image/post/hent9.jpg"></a></div>
+                </div>
+            </div>
+            <div class="subContainer">
+                <div class="sectionTitle">
+                    <a class="sectionTitleLink">Recently posted<span class="arrow"><i></i></span></a>
+                </div>
+                <div class="containerPopularArts">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    <div class="item">6</div>
+                </div>
+            </div>
+            <div class="subContainer">
+                <div class="sectionTitle">
+                    <a class="sectionTitleLink">Best video<span class="arrow"><i></i></span></a>
+                </div>
+                <div class="containerPopularArts">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    <div class="item">6</div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <main class="container">
+            <div class="sectionTitle">
+                <a href="" class="sectionTitleLink">Popular arts<i class="fa-solid fa-caret-right arrow"></i></a>
+            </div>
+            <section id="gallery" class="no-gutter-sizer">
+                <div class="item-masonry sizer4">
+                    <img src="image/post/hent1.jpg">
+                    <div class="cover-item-gallery">
+                        <a href="">
+                            <i class="fa fa-search fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-masonry sizer4">
+                    <img src="image/post/hent2.jpg">
+                    <div class="cover-item-gallery">
+                        <a href="">
+                            <i class="fa fa-search fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-masonry sizer4">
+                    <img src="image/post/hent3.jpg">
+                    <div class="cover-item-gallery">
+                        <a href="">
+                            <i class="fa fa-search fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-masonry sizer4">
+                    <img src="image/post/hent4.jpg">
+                    <div class="cover-item-gallery">
+                        <a href="">
+                            <i class="fa fa-search fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-masonry sizer4">
+                    <img src="image/post/hent5.jpg">
+                    <div class="cover-item-gallery">
+                        <a href="">
+                            <i class="fa fa-search fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-masonry sizer4">
+                    <img src="image/post/hent6.jpg">
+                    <div class="cover-item-gallery">
+                        <a href="">
+                            <i class="fa fa-search fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-masonry sizer4">
+                    <img src="image/post/hent7.jpg">
+                    <div class="cover-item-gallery">
+                        <a href="">
+                            <i class="fa fa-search fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main> -->
+
+        <aside id="leftMenu" style="color: white;">
+            <div id="headerMenu">
+                <div class="headerMenu-title">BestHntArt</div>
+                <span class="closeHamMenu">
+                    <i class="fa-solid fa-xmark closeIcon"></i>
+                </span>
+            </div>
+            <div class="rightMenu__links menuWrapper menuSection">
+                <a href="index.html" class="rightMenu__link">Home</a>
+                <a href="" class="rightMenu__link">Posts</a>
+                <a href="images.html" class="rightMenu__link">Images</a>
+                <a href="" class="rightMenu__link">Videos</a>
+                <a href="" class="rightMenu__link">Cosplay</a>
+                <a href="" class="rightMenu__link">Casual</a>
+                <a href="" class="rightMenu__link">18+</a>
+            </div>
+        </aside>
+        <aside id="rightMenu" style="color: white;">
+            <div id="headerMenu">
+                <span class="closeHamMenu-2">
+                    <i class="fa-solid fa-xmark closeIcon"></i>
+                </span>
+                <div class="headerMenu-title">Профиль</div>
+            </div>
+            <div class="rightMenu__links menuWrapper menuSection">
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-user"></i>Мой профиль</a>
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-heart"></i>Лайки</a>
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-bell"></i>Уведомления</a>
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-user-group"></i>Подписки</a>
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-clipboard"></i>Мои посты</a>
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-user-xmark"></i>Игнор лист</a>
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-gear"></i>Настройки</a>
+                <a href="" class="rightMenu__link"><i class="fa-solid fa-right-from-bracket"></i>Выход</a>
+            </div>
+        </aside>
+        <footer class="footer">
+            <div class="footerContent">
+                <div class="col">
+                    <ul>
+                        <li class="title-alpha">В случаях нарушения авторских прав - нам похуй</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li class="title-alpha"><a href="">Поддержать сайт</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_link">
+                <div class="social_link">
+                    <a href=""><img src="image/vk.png"></a>
+                    <a href=""><img src="image/tg.png"></a>
+                    <a href=""><img src="image/inst.png"></a>
+                    <a href=""><img src="image/ds.png"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkg   d.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
