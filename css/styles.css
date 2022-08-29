@@ -71,54 +71,6 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* raleway-regular - latin */
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-        url('../fonts/raleway-v28-latin-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/raleway-v28-latin-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* raleway-500 - latin */
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    src: local(''),
-        url('../fonts/raleway-v28-latin-500.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/raleway-v28-latin-500.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* raleway-600 - latin */
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 600;
-    src: local(''),
-        url('../fonts/raleway-v28-latin-600.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/raleway-v28-latin-600.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* raleway-700 - latin */
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-        url('../fonts/raleway-v28-latin-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/raleway-v28-latin-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 
 html {
     box-sizing: border-box;
@@ -647,7 +599,7 @@ body._lock .mobileMenuBackground {
     min-height: 49px;
     border-radius: 5px;
     font-size: 18px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-weight: 500;
     transition: 0.6s;
     overflow: hidden;
@@ -691,13 +643,13 @@ body._lock .mobileMenuBackground {
 }
 
 .btnReg:hover:before {
-    transform: translateX(360px) skewX(-15deg);
+    transform: translateX(540px) skewX(-15deg);
     opacity: 0.6;
     transition: 0.7s;
 }
 
 .btnReg:hover:after {
-    transform: translateX(360px) skewX(-15deg);
+    transform: translateX(540px) skewX(-15deg);
     opacity: 1;
     transition: 0.7s;
 }
