@@ -220,3 +220,10 @@ if (btnFilter) {
         }
     });
 }
+
+
+// $('.registerForm').on('submit', function () {
+//     console.log('Register')
+//     $('.btnReg"]').attr('disabled', true); // Блокируем
+//     return true;
+// });

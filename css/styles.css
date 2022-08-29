@@ -609,6 +609,10 @@ body._lock .mobileMenuBackground {
     color: pink;
 }
 
+.registerForm p input:focus::placeholder {
+    opacity: 0.7;
+    /* border: 2px solid #f588d1; */
+}
 
 /* .btnReg {
     width: 100%;
@@ -630,6 +634,7 @@ body._lock .mobileMenuBackground {
     left: 0%;
     top: 0%;
     transform: translateX(0%) translateY(0%);
+    border: none;
 }
 
 .btnReg {
