@@ -74,35 +74,12 @@ const isMobile = {
 
 if (isMobile.any()) {
     document.body.classList.add('_touch');
-
+    // leftmenu
+    rlMenu('#mobileNavigation', '#leftMenu', '.closeHamMenu')
     // rightmenu
-    const profile = document.querySelector('.profile');
-    const rightMenu = document.querySelector('#rightMenu');
-    if (profile) {
-        profile.addEventListener("click", function (e) {
-            rightMenu.classList.toggle('_active');
-            document.body.classList.toggle('_lock')
-        });
-
-        $(document).on('mouseup', function (e) {
-            let s = $('#rightMenu');
-
-            if (rightMenu.classList.contains('_active') === true) {
-                if (!s.is(e.target) && s.has(e.target).length === 0) {
-                    s.removeClass('_active');
-                    document.body.classList.remove('_lock')
-                } else {
-                    const closeHamMenu = document.querySelector('.closeHamMenu-2');
-                    if (closeHamMenu) {
-                        closeHamMenu.addEventListener("click", function (e) {
-                            rightMenu.classList.remove('_active');
-                            document.body.classList.remove('_lock')
-                        });
-                    }
-                }
-            }
-        });
-    }
+    rlMenu('.profile', '#rightMenu', '.closeHamMenu-2')
+    // фильтры paper_mobile
+    rlMenu('.btnFilter', '.paper_mobile', '.search-filter__head-2')
 
 } else {
     document.body.classList.add('_pc');
@@ -122,27 +99,27 @@ if (isMobile.any()) {
 }
 
 
-// меню бургер leftmenu
-const button = document.querySelector('#mobileNavigation');
-const leftMenu = document.querySelector('#leftMenu');
-if (button) {
+function rlMenu(btn, rlmenu, close) {
+    const button = document.querySelector(btn)
+    const menu = document.querySelector(rlmenu)
+    const closeHamMenu = document.querySelector(close)
+
     button.addEventListener("click", function (e) {
-        leftMenu.classList.toggle('_active');
+        menu.classList.toggle('_active');
         document.body.classList.toggle('_lock')
     });
 
     $(document).on('mouseup', function (e) {
-        let s = $('#leftMenu');
+        let s = $(menu)
 
-        if (leftMenu.classList.contains('_active') === true) {
+        if (menu.classList.contains('_active') === true) {
             if (!s.is(e.target) && s.has(e.target).length === 0) {
                 s.removeClass('_active');
                 document.body.classList.remove('_lock')
             } else {
-                const closeHamMenu = document.querySelector('.closeHamMenu');
                 if (closeHamMenu) {
                     closeHamMenu.addEventListener("click", function (e) {
-                        leftMenu.classList.remove('_active');
+                        menu.classList.remove('_active');
                         document.body.classList.remove('_lock')
                     });
                 }
@@ -151,10 +128,7 @@ if (button) {
     });
 }
 
-
-
 function btn(name, clsname) {
-
     $(document).ready(function () {
         $(name).click(function () {
             $(clsname).addClass('_active');
@@ -169,6 +143,7 @@ function btn(name, clsname) {
         });
     });
 }
+
 
 // topics
 btn('.search-filter-submenu', '.search-filter-layout')
@@ -191,39 +166,3 @@ if (boxes) {
 }
 
 
-
-// фильтры paper_mobile
-const btnFilter = document.querySelector('.btnFilter');
-const paper_mobile = document.querySelector('.paper_mobile');
-if (btnFilter) {
-    btnFilter.addEventListener("click", function (e) {
-        document.body.classList.toggle('_lock')
-        paper_mobile.classList.toggle('_active');
-    });
-
-    $(document).on('mouseup', function (e) {
-        let s = $('.paper_mobile');
-
-        if (paper_mobile.classList.contains('_active') === true) {
-            if (!s.is(e.target) && s.has(e.target).length === 0) {
-                s.removeClass('_active');
-                document.body.classList.remove('_lock')
-            } else {
-                const closeHamMenu = document.querySelector('.search-filter__head-2');
-                if (closeHamMenu) {
-                    closeHamMenu.addEventListener("click", function (e) {
-                        document.body.classList.remove('_lock')
-                        paper_mobile.classList.remove('_active');
-                    });
-                }
-            }
-        }
-    });
-}
-
-
-// $('.registerForm').on('submit', function () {
-//     console.log('Register')
-//     $('.btnReg"]').attr('disabled', true); // Блокируем
-//     return true;
-// });
