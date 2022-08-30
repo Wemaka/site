@@ -26,12 +26,12 @@
                     </a>
                     <div class="form">
                         <h2>Sign Up</h2>
-                        <form class="registerForm">
+                        <form class="regForm">
                             <p>
-                                <input autofocus type="text" placeholder="Login">
+                                <input class="input" autofocus type="text" placeholder="Login">
                             </p>
                             <p>
-                                <input type="text" placeholder="Email">
+                                <input class="input" type="text" placeholder="Email">
                             </p>
                             <!-- ошибка -->
                             <!-- <div class="form-error">
@@ -40,7 +40,7 @@
                                 </ul>
                             </div> -->
                             <p>
-                                <input type="password" placeholder="Password">
+                                <input class="input" type="password" placeholder="Password">
                             </p>
 
 
@@ -83,7 +83,7 @@
                                 </div>
                                 <div>Continue with Facebook<div>
                             </button>
-                            <div class="forgotData" style="margin-top: 32px;">
+                            <div class="fData" style="margin-top: 32px;">
                                 <a href="">Already registered? Log In</a>
                             </div>
                         </form>
@@ -94,20 +94,26 @@
     </div>
     <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkg   d.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
-    <script src="js/scripts.js"></script>
     <script>
         var backgrounds = [
-            "url(image/backgrounds/bg1.jpg) 40% 50% no-repeat",
-            "url(image/backgrounds/bg2.jpg) 40% 50% no-repeat",
-            "url(image/backgrounds/bg3.webp) 40% 50% no-repeat",
-            "url(image/backgrounds/bg4.jpg) 40% 50% no-repeat",
-            "url(image/backgrounds/bg5.jpg) 40% 50% no-repeat",
-            "url(image/backgrounds/bg9.jpg) 40% 50% no-repeat",
+            "url(image/backgrounds/bg1.jpg) 50% 50% no-repeat",
+            "url(image/backgrounds/bg2.jpg) 50% 50% no-repeat",
+            "url(image/backgrounds/bg3.webp) 50% 50% no-repeat",
+            "url(image/backgrounds/bg4.jpg) 50% 50% no-repeat",
+            "url(image/backgrounds/bg5.jpg) 50% 50% no-repeat",
+            "url(image/backgrounds/bg9.jpg) 50% 50% no-repeat",
         ];
         document.querySelector('.regContainer').style.background = backgrounds[Math.floor(Math.random() * (backgrounds.length))];
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(document).keypress(function (event) {
+                if (event.keyCode == 13) {
+                    $(event.target).parents().nextAll().find('.input').first().focus();
+                    event.preventDefault();
+                }
+            });
+        });
     </script>
 </body>
 

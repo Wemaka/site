@@ -117,6 +117,61 @@ body._lock .mobileMenuBackground {
     text-decoration: none;
 }
 
+.wd10 {
+    width: 10%;
+}
+
+.wd20 {
+    width: 20%;
+}
+
+.wd30 {
+    width: 30%;
+}
+
+.wd40 {
+    width: 40%;
+}
+
+.wd50 {
+    width: 50%;
+}
+
+.wd60 {
+    width: 60%;
+}
+
+.wd70 {
+    width: 70%;
+}
+
+.wd80 {
+    width: 80%;
+}
+
+.wd90 {
+    width: 90%;
+}
+
+.wd100 {
+    width: 100%;
+}
+
+.fs14 {
+    font-size: 14px
+}
+
+.fs20 {
+    font-size: 20px
+}
+
+.fs42 {
+    font-size: 42px
+}
+
+.fs100 {
+    font-size: 100px
+}
 
 .header {
     display: grid;
@@ -516,6 +571,7 @@ body._lock .mobileMenuBackground {
 }
 
 .form {
+    justify-content: space-around;
     padding: 40px 48px;
     width: 100%;
     height: 100%;
@@ -534,18 +590,18 @@ body._lock .mobileMenuBackground {
     margin: 0 0 3px;
 }
 
-.registerForm {
+.regForm {
     /* margin: 40px 0 53px; */
     margin: 40px 0 0;
 }
 
-.registerForm p {
+.regForm p {
     margin-bottom: 20px;
 
 }
 
 
-.registerForm p input {
+.regForm p input {
     width: 100%;
     height: 40px;
     padding: 5px;
@@ -557,11 +613,11 @@ body._lock .mobileMenuBackground {
     color: white;
 }
 
-.registerForm p input::placeholder {
+.regForm p input::placeholder {
     color: pink;
 }
 
-.registerForm p input:focus::placeholder {
+.regForm p input:focus::placeholder {
     opacity: 0.7;
     /* border: 2px solid #f588d1; */
 }
@@ -664,12 +720,12 @@ body._lock .mobileMenuBackground {
     color: rgb(255, 91, 91);
 }
 
-.forgotData {
+.fData {
     margin-top: 5px;
     text-align: right;
 }
 
-.forgotData a {
+.fData a {
     /* font-family: Inter; */
     font-style: regular;
     color: rgb(233, 233, 233);
