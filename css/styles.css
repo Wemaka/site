@@ -544,7 +544,8 @@ body._lock .mobileMenuBackground {
     border-radius: 20px;
     /* width: 856px;
     height: 690px; */
-    width: auto;
+
+    /* width: auto; */
     height: auto;
     background: #06080D;
     display: flex;
@@ -609,7 +610,7 @@ body._lock .mobileMenuBackground {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 2px solid #f588d1;
+    border-bottom: 1px solid #f588d1;
     color: white;
 }
 
@@ -620,6 +621,10 @@ body._lock .mobileMenuBackground {
 .regForm p input:focus::placeholder {
     opacity: 0.7;
     /* border: 2px solid #f588d1; */
+}
+
+.regForm p input:focus {
+    border-bottom: 2px solid #f588d1;
 }
 
 /* .btnReg {

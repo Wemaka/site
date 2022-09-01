@@ -100,6 +100,7 @@ if (isMobile.any()) {
 
 
 function rlMenu(btn, rlmenu, close) {
+    console.log('text')
     const button = document.querySelector(btn)
     const menu = document.querySelector(rlmenu)
     const closeHamMenu = document.querySelector(close)
@@ -129,6 +130,7 @@ function rlMenu(btn, rlmenu, close) {
 }
 
 function btn(name, clsname) {
+    console.log('text')
     $(document).ready(function () {
         $(name).click(function () {
             $(clsname).addClass('_active');
