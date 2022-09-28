@@ -17,7 +17,8 @@ $(document).ready(function () {
 })
 
 // external js: masonry.pkgd.js
-$(document).ready(function () {
+// $(document).ready(function () {
+jQuery(window).on('load', function(){
     // jQuery('.item-masonry').hover(
     //     function () {
     //         $(this).find(".cover-item-gallery").fadeIn(200);
@@ -31,66 +32,60 @@ $(document).ready(function () {
 
     //     }
     // );
+
     var sizer = '.sizer4';
     var container = $('#gallery');
 
     container.imagesLoaded(function () {
         container.masonry({
             itemSelector: '.item-masonry',
-            columnWidth: sizer,
+            // columnWidth: sizer,
             percentPosition: true,
-            transitionDuration: '0.2s'
+            transitionDuration: '0.2s',
+            gutter: 15,
         })
     });
+    // var elem = document.querySelector('#gallery');
+    // var msnry = new Masonry(elem, {
+    //     itemSelector: '.item-masonry',
+    //     columnWidth: sizer,
+    //     percentPosition: true,
+    //     transitionDuration: '0.2s',
+    // });
 });
 
 
-// device definition
-const isMobile = {
-    Android: function () {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function () {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    IOS: function () {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function () {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function () {
-        return navigator.userAgent.match(/IEMibile/i);
-    },
-    any: function () {
-        return (
-            isMobile.Android() ||
-            isMobile.BlackBerry() ||
-            isMobile.IOS() ||
-            isMobile.Opera() ||
-            isMobile.Windows());
-    }
-};
+// infinite scroll
+let elem = document.querySelector('#gallery');
+let infScroll = new InfiniteScroll( elem, {
+  // options
+  path: '.pagination__next',
+  append: '.post',
+  history: false,
+  status: '.scroller-status',
+  hideNav: '.pagination',
+});
 
-if (isMobile.any()) {
-    document.body.classList.add('_touch');
-    // leftmenu
-    rlMenu('#mobileNavigation', '#leftMenu', '.closeHamMenu')
+
+
+
+
+if (document.body.classList.contains('_touch')) {
+    // left-menu
+    rlMenu('.header__movbile-navigation', '#nav-menu-mobile', '.close-ham-menu')
     // rightmenu
-    rlMenu('.profile', '#rightMenu', '.closeHamMenu-2')
+    rlMenu('.header__profile', '#profile-menu-mobile', '.close-ham-menu-2')
     // фильтры paper_mobile
     rlMenu('.btnFilter', '.paper_mobile', '.search-filter__head-2')
 
 } else {
-    document.body.classList.add('_pc');
-
     // меню профиля
-    $('.profile').on('click', function () {
+    $('.header__profile').on('click', function () {
         $(this).toggleClass('_active');
     });
 
     $(document).on('mouseup', function (e) { // При нажатии на документ
-        let s = $('.profile._active'); // берём .block._active
+        let s = $('.header__profile._active'); // берём .block._active
         if (!s.is(e.target) && s.has(e.target).length === 0) {
             // Если нажат не он и не его дочернии И сам он существует
             s.removeClass('_active'); // То удаляем у него класс .active
@@ -100,7 +95,6 @@ if (isMobile.any()) {
 
 
 function rlMenu(btn, rlmenu, close) {
-    console.log('text')
     const button = document.querySelector(btn)
     const menu = document.querySelector(rlmenu)
     const closeHamMenu = document.querySelector(close)
@@ -130,18 +124,16 @@ function rlMenu(btn, rlmenu, close) {
 }
 
 function btn(name, clsname) {
-    console.log('text')
     $(document).ready(function () {
         $(name).click(function () {
             $(clsname).addClass('_active');
-            console.log('open')
+
         });
     });
 
     $(document).ready(function () {
         $('.search-filter__head').click(function () {
             $(clsname).removeClass('_active');
-            console.log('close')
         });
     });
 }

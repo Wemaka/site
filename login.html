@@ -7,26 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/password.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https: //fonts.googleapis.com/css2?family= Inter: wght @500 & display=swap" rel="stylesheet">
 
     <title>Document</title>
 </head>
 
 <body id="body">
     <div class="wrapper">
-        <main class="regContainer">
-            <div class="regMenu">
-                <div class="formContainer">
-                    <a class="closeBtn" href="">
+        <main class="reg-container">
+            <div class="reg-menu">
+                <div class="form-container">
+                    <a class="close-btn" href="">
                         <i class="fa-solid fa-xmark"></i>
                     </a>
-                    <div class="form">
-                        <h2>Log In</h2>
-                        <form class="regForm">
+                    <div class="reg-menu__form pd4048">
+                        <h2 class="fs42">Log In</h2>
+                        <form class="reg-menu__reg-form">
                             <p>
                                 <input class="input" autofocus type="text" placeholder="Login or Email">
                             </p>
@@ -42,7 +41,7 @@
 
 
                             <div>
-                                <button class="btnReg" type="submit">Log In</button>
+                                <button class="btn-reg" type="submit">Log In</button>
                             </div>
 
 
@@ -54,8 +53,8 @@
                                 <div class="or">or</div>
                                 <div class="line"></div>
                             </div>
-                            <button class="entranceOr">
-                                <div class="signIcon">
+                            <button class="reg-menu__entranceOr">
+                                <div class="sign-icon">
                                     <svg fill="#F28CC3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
                                         width="30px" height="30px">
                                         <path
@@ -64,8 +63,8 @@
                                 </div>
                                 <div>Continue with VK</div>
                             </button>
-                            <button class="entranceOr">
-                                <div class="signIcon">
+                            <button class="reg-menu__entranceOr">
+                                <div class="sign-icon">
                                     <svg fill="#F28CC3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
                                         width="30px" height="30px">
                                         <path
@@ -74,8 +73,8 @@
                                 </div>
                                 <div>Continue with Google<div>
                             </button>
-                            <button class="entranceOr">
-                                <div class="signIcon">
+                            <button class="reg-menu__entranceOr">
+                                <div class="sign-icon">
                                     <svg fill="#F28CC3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
                                         width="30px" height="30px">
                                         <path
@@ -93,6 +92,7 @@
             </div>
         </main>
     </div>
+    <script src="js/device.js"></script>
     <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -102,9 +102,8 @@
             "url(image/backgrounds/bg3.webp) 50% 50% no-repeat",
             "url(image/backgrounds/bg4.jpg) 50% 50% no-repeat",
             "url(image/backgrounds/bg5.jpg) 50% 50% no-repeat",
-            "url(image/backgrounds/bg9.jpg) 50% 50% no-repeat",
         ];
-        document.querySelector('.regContainer').style.background = backgrounds[Math.floor(Math.random() * (backgrounds.length))];
+        document.querySelector('.reg-container').style.background = backgrounds[Math.floor(Math.random() * (backgrounds.length))];
     </script>
     <script>
         $(document).ready(function () {

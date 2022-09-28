@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https: //fonts.googleapis.com/css2?family= Inter: wght @500 & display=swap" rel="stylesheet">
 
     <title>Document</title>
 </head>
@@ -19,27 +18,24 @@
 <body id="body">
     <div class="mobileMenuBackground"></div>
     <div class="wrapper">
-        <header id="header" class="header">
-            <div class="headerWrapper">
-                <div class="headerContainer">
-                    <div class="logo">
-                        <span class="namelogo">BestHntArt</span>
+        <header class="header">
+            <div class="header__wrapper">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <span class="header__logo logo">BestHntArt</span>
                     </div>
-                    <!-- <div class="navBurger">
-                        <span></span>
-                    </div> -->
-                    <button id="mobileNavigation" type="button">
+                    <button class="header__movbile-navigation" type="button">
                         <i class="fa-solid fa-bars hamburgerIcon"></i>
                     </button>
-                    <div class="headerSearch">
+                    <div class="header__search">
                         <form autocomplete="off" action="" method="get">
                             <fieldset class="fs-nf">
-                                <div class="searchBarContainer">
+                                <div class="search-bar-container">
                                     <label for="search">
-                                        <input class="seatchInput" type="text" value placeholder="Поиск"
-                                            autocomplete="off" style="color: #ffffff;">
+                                        <input class="search-bar-container__search-input search-input" type="text" value
+                                            placeholder="Поиск" autocomplete="off" style="color: #ffffff;">
                                     </label>
-                                    <button class="searchButton">
+                                    <button class="search-bar-container__search-button">
                                         <svg width="95%" height="95%" viewBox="0 0 15 15" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="5" cy="5" r="4.5" stroke="#838592" />
@@ -52,209 +48,496 @@
                             </fieldset>
                         </form>
                     </div>
-                    <div class="notificationIcon">
-                        <div>
-                            <i class="fa-solid fa-bell" style="color:white;"></i>
-                            <i class="fa-solid fa-heart" style="color:white;"></i>
+                    <div class="header__notification-icon">
+                        <div class="notification-items">
+                            <div class="notification-items__item">
+                                <span
+                                    class="notification-items__number-of-notifications number-of-notifications">0</span>
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                            <div class="notification-items__item">
+                                <span
+                                    class="notification-items__number-of-notifications number-of-notifications">0</span>
+                                <i class=" fa-solid fa-heart"></i>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="profile">
-                        <img class="smallAvatar" src="image/avatar.png" alt="Аватар">
-                        <ul class="profileDropdown">
-                            <li><span><a href="#" class="profileDropdownLink"><i class="fa-solid fa-user"></i>Мой
+                    <div class="header__profile">
+                        <img class="small-avatar" src="image/avatar.png" alt="Аватар">
+                        <ul class="profile-dropdown">
+                            <li><span><a href="#" class="profile-dropdown__Link"><i class="fa-solid fa-user"></i>Мой
                                         профиль</a></span></li>
-                            <li><span><a href="#" class="profileDropdownLink"><i
+                            <li><span><a href="#" class="profile-dropdown__Link"><i
                                             class="fa-solid fa-heart"></i>Лайки</a></span></li>
-                            <li><span><a href="#" class="profileDropdownLink"><i
+                            <li><span><a href="#" class="profile-dropdown__Link"><i
                                             class="fa-solid fa-bell"></i>Уведомления</a></span></li>
-                            <li><span><a href="#" class="profileDropdownLink"><i
+                            <li><span><a href="#" class="profile-dropdown__Link"><i
                                             class="fa-solid fa-user-group"></i>Подписки</a></span></li>
-                            <li><span><a href="#" class="profileDropdownLink"><i class="fa-solid fa-clipboard"></i>Мои
+                            <li><span><a href="#" class="profile-dropdown__Link"><i
+                                            class="fa-solid fa-clipboard"></i>Мои
                                         посты</a></span></li>
-                            <li><span><a href="#" class="profileDropdownLink"><i
+                            <li><span><a href="#" class="profile-dropdown__Link"><i
                                             class="fa-solid fa-user-xmark"></i>Игнор-лист</a></span></li>
                             <li style="border-top: solid 1px rgb(206, 206, 206);"><span><a href="#"
-                                        class="profileDropdownLink"><i class="fa-solid fa-gear"></i>Настройки</a></span>
+                                        class="profile-dropdown__Link"><i
+                                            class="fa-solid fa-gear"></i>Настройки</a></span>
                             </li>
-                            <li><span><a href="#" class="profileDropdownLink" style="color:red;"><i
+                            <li><span><a href="#" class="profile-dropdown__Link" style="color:red;"><i
                                             class="fa-solid fa-right-from-bracket"></i>Выход</a></span></li>
                         </ul>
                     </div>
-
                 </div>
+                <nav class="header__nav">
+                    <ul class="header__nav-menu">
+                        <li><a href="index.html"><span class="header__item-name">Home</span></a></li>
+                        <li><a href=""><span class="header__item-name">Posts</span></a></li>
+                        <li><a href="images.html"><span class="header__item-name">Images</span></a></li>
+                        <li><a href=""><span class="header__item-name">Videos</span></a></li>
+                        <li><a href=""><span class="header__item-name">Cosplay</span></a></li>
+                        <li><a href=""><span class="header__item-name">Casual</span></a></li>
+                        <li><a href=""><span class="header__item-name">18+</span></a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="headerNav">
-                <ul class="navMenu">
-                    <li><a href="index.html"><span class="itemName">Home</span></a></li>
-                    <li><a href=""><span class="itemName">Posts</span></a></li>
-                    <li><a href="images.html"><span class="itemName">Images</span></a></li>
-                    <li><a href=""><span class="itemName">Videos</span></a></li>
-                    <li><a href=""><span class="itemName">Cosplay</span></a></li>
-                    <li><a href=""><span class="itemName">Casual</span></a></li>
-                    <li><a href=""><span class="itemName">18+</span></a></li>
-                </ul>
-            </nav>
-            <!-- <div class="block">
-                <div class="block__row">
-                    <div class="block__column bl1">
-                        <div class="block__item">
-                            1
-                        </div>
-                    </div>
-                    <div class="block__column bl2">
-                        <div class="block__item">
-                            2
-                        </div>
-                    </div>
-                    <div class="block__column bl3">
-                        <div class="block__item">
-                            3
-                        </div>
-                    </div>
-                    <div class="block__column bl4">
-                        <div class="block__item">
-                            4
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </header>
         <main class="page">
             <div class="page__inner">
                 <div class="page__wrapper">
-                    <div class="containerGallery">
-                        <div class="sectionTitle">
-                            <a href="" class="sectionTitleLink">Popular arts<i
+                    <div class="container-gallery">
+                        <div class="section-title">
+                            <a href="" class="section-title__link">Popular arts<i
                                     class="fa-solid fa-caret-right arrow"></i></a>
                         </div>
                         <section id="gallery" class="no-gutter-sizer">
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent7.jpg">
+                                <img src="image/post/im (1).gif">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent1.jpg">
+                                <!-- <div class="arrow-btn"></div> -->
+                                <img src="image/post/im (1).jpg" loading="lazy" alt="">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent2.jpg">
+                                <img src="image/post/im (16).jpg" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent3.jpg">
+                                <img src="image/post/im (17).jpg" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent4.jpg">
+                                <img src="image/post/im (18).jpg" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent5.jpg">
+                                <img src="image/post/im (14).jpg" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent6.jpg">
+                                <img src="image/post/im (19).jpg" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent8.jpg">
+                                <img src="image/post/im (2).png" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent9.jpg">
+                                <img src="image/post/im (20).jpg" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div class="cover-item-gallery__container">
+                                        <div>
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item-masonry sizer4">
-                                <img src="image/post/hent10.jpg">
+                                <img src="image/post/im (2).jpg" loading="lazy">
                                 <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item-masonry sizer4">
-                                <img src="image/post/hent11.jpg">
-                                <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item-masonry sizer4">
-                                <img src="image/post/hent12.jpg">
-                                <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item-masonry sizer4">
-                                <img src="image/post/hent13.jpg">
-                                <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item-masonry sizer4">
-                                <img src="image/post/hent14.jpg">
-                                <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item-masonry sizer4">
-                                <img src="image/post/hent15.jpg">
-                                <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item-masonry sizer4">
-                                <img src="image/post/hent16.jpg">
-                                <div class="cover-item-gallery">
-                                    <a href="">
-                                        <i class="fa fa-search fa-2x"></i>
-                                    </a>
+                                    <a href=""></a>
+                                    <div>
+                                        <div class="cover-item-gallery__container">
+                                            <div class="cover-item-gallery__items">
+                                                <div class="cover-item-gallery__author">
+                                                    <div class="gallery__author">
+                                                        <div class="gallery__author-avatar">
+                                                            <a href="">
+                                                                <img src="image/avatar.png"
+                                                                    style="width: 25px; height: 25px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="gallery__author-name">
+                                                            <a href="">
+                                                                <span style="display: contents;">nickname</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cover-item-gallery__LC">
+                                                    <a href="" class="cover-item-gallery__com">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">100</div>
+                                                            <span><i class="fa-regular fa-message"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </a>
+                                                    <button class="cover-item-gallery__likes">
+                                                        <div class="_39asK">
+                                                            <div class="gallery__numcom">200</div>
+                                                            <span><i class="fa-regular fa-heart"
+                                                                    style="width:18px; height:18px"></i></span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -371,56 +654,56 @@
             </section>
         </main> -->
 
-        <aside id="leftMenu" style="color: white;">
-            <div id="headerMenu">
-                <div class="headerMenu-title">BestHntArt</div>
-                <span class="closeHamMenu">
-                    <i class="fa-solid fa-xmark closeIcon"></i>
+        <aside id="nav-menu-mobile" style="color: white;">
+            <div id="header-menu">
+                <div class="header-menu__title">BestHntArt</div>
+                <span class="close-ham-menu">
+                    <i class="fa-solid fa-xmark close-icon"></i>
                 </span>
             </div>
-            <div class="rightMenu__links menuWrapper menuSection">
-                <a href="index.html" class="rightMenu__link">Home</a>
-                <a href="" class="rightMenu__link">Posts</a>
-                <a href="images.html" class="rightMenu__link">Images</a>
-                <a href="" class="rightMenu__link">Videos</a>
-                <a href="" class="rightMenu__link">Cosplay</a>
-                <a href="" class="rightMenu__link">Casual</a>
-                <a href="" class="rightMenu__link">18+</a>
+            <div class="nav-menu-links menu-wrapper menu-section">
+                <a href="index.html" class="nav-menu__link">Home</a>
+                <a href="" class="nav-menu__link">Posts</a>
+                <a href="images.html" class="nav-menu__link">Images</a>
+                <a href="" class="nav-menu__link">Videos</a>
+                <a href="" class="nav-menu__link">Cosplay</a>
+                <a href="" class="nav-menu__link">Casual</a>
+                <a href="" class="nav-menu__link">18+</a>
             </div>
         </aside>
-        <aside id="rightMenu" style="color: white;">
-            <div id="headerMenu">
-                <span class="closeHamMenu-2">
-                    <i class="fa-solid fa-xmark closeIcon"></i>
+        <aside id="profile-menu-mobile" style="color: white;">
+            <div id="header-menu">
+                <span class="close-ham-menu-2">
+                    <i class="fa-solid fa-xmark close-icon"></i>
                 </span>
-                <div class="headerMenu-title">Профиль</div>
+                <div class="header-menu__title">Профиль</div>
             </div>
-            <div class="rightMenu__links menuWrapper menuSection">
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-user"></i>Мой профиль</a>
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-heart"></i>Лайки</a>
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-bell"></i>Уведомления</a>
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-user-group"></i>Подписки</a>
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-clipboard"></i>Мои посты</a>
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-user-xmark"></i>Игнор лист</a>
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-gear"></i>Настройки</a>
-                <a href="" class="rightMenu__link"><i class="fa-solid fa-right-from-bracket"></i>Выход</a>
+            <div class="nav-menu-links menu-wrapper menu-section">
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-user"></i>Мой профиль</a>
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-heart"></i>Лайки</a>
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-bell"></i>Уведомления</a>
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-user-group"></i>Подписки</a>
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-clipboard"></i>Мои посты</a>
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-user-xmark"></i>Игнор лист</a>
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-gear"></i>Настройки</a>
+                <a href="" class="nav-menu__link"><i class="fa-solid fa-right-from-bracket"></i>Выход</a>
             </div>
         </aside>
         <footer class="footer">
-            <div class="footerContent">
-                <div class="col">
+            <div class="footer__content">
+                <div class="footer__title">
                     <ul>
-                        <li class="title-alpha">В случаях нарушения авторских прав - нам похуй</li>
+                        <li class="footer__title-text">В случаях нарушения авторских прав - нам похуй</li>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="footer__title">
                     <ul>
-                        <li class="title-alpha"><a href="">Поддержать сайт</a></li>
+                        <li class="footer__title-text"><a href="">Поддержать сайт</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer_link">
-                <div class="social_link">
+            <div class="footer__link">
+                <div class="footer__social-link">
                     <a href=""><img src="image/vk.png"></a>
                     <a href=""><img src="image/tg.png"></a>
                     <a href=""><img src="image/inst.png"></a>
@@ -429,10 +712,10 @@
             </div>
         </footer>
     </div>
+    <script src="js/device.js"></script>
     <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkg   d.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
     <script src="js/scripts.js"></script>
 </body>

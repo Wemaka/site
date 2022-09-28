@@ -1,0 +1,49 @@
+body {
+  &._touch {
+    .page__wrapper {
+        padding: 94px 10px;
+    }
+  } 
+}
+
+
+.page {
+    // padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    // width: 100vw;
+
+  }
+  
+  // .page__inner {
+  //   flex-grow: 1;
+  //   max-width: 1920px;
+  //   // margin-top: 17px;
+  //   // margin: 0 auto;
+  
+  //   /* padding: 0 15px 0 0; */
+  //   width: 100%;
+  
+  //   /* box-sizing: border-box; */
+  
+  //   &::after {
+  //     content: "";
+  //     display: block;
+  //     clear: both;
+  
+  //     /* box-sizing: border-box; */
+  //   }
+  // }
+  
+  .page__wrapper {
+    max-width: 1920px;
+    position: relative;
+    border-radius: 4px;
+
+    padding: 94px 30px;
+    // float: right;
+    // width: 100%;
+  
+    /* box-sizing: border-box; */
+  }
