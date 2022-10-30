@@ -25,6 +25,7 @@ const isMobile = {
     }
 };
 
+
 if (isMobile.any()) {
     document.body.classList.add('_touch');
 

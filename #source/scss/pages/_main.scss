@@ -1,10 +1,4 @@
-body {
-  &._touch {
-    .page__wrapper {
-        padding: 94px 10px;
-    }
-  } 
-}
+
 
 
 .page {
@@ -14,7 +8,44 @@ body {
     min-height: 100vh;
     // width: 100vw;
 
+    &__wrapper {
+      // max-width: 1920px;
+      // position: relative;
+      // border-radius: 4px;
+      // padding: 94px 30px;
+      // width: calc(100vw - 300px);
+      // width: 80%;
+      // margin-left: auto;
+  
+      // float: right;
+      // width: 100%;
+    
+      /* box-sizing: border-box; */
+  
+      padding: 100px 0;
+  
+      position: relative;
+      // float: right;
+      width: calc(100% - 350px);
+
+    }
   }
+
+.container {
+  display: flex;
+  max-width: 1920px; 
+  margin-top: 17px; 
+  margin: 0 auto; 
+  width: 100%;
+  padding-bottom: 15px;
+  min-width: 0;
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
   
   // .page__inner {
   //   flex-grow: 1;
@@ -35,15 +66,3 @@ body {
   //     /* box-sizing: border-box; */
   //   }
   // }
-  
-  .page__wrapper {
-    max-width: 1920px;
-    position: relative;
-    border-radius: 4px;
-
-    padding: 94px 30px;
-    // float: right;
-    // width: 100%;
-  
-    /* box-sizing: border-box; */
-  }

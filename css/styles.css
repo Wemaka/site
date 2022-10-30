@@ -3,6 +3,8 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
+  font-display: fallback;
   src: local(""), url("../fonts/inter-v12-latin-regular.woff2") format("woff2"), url("../fonts/inter-v12-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -11,6 +13,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
+  font-display: fallback;
   src: local(""), url("../fonts/inter-v12-latin-500.woff2") format("woff2"), url("../fonts/inter-v12-latin-500.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -19,6 +22,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
+  font-display: fallback;
   src: local(""), url("../fonts/inter-v12-latin-700.woff2") format("woff2"), url("../fonts/inter-v12-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -27,6 +31,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: local(""), url("../fonts/rubik-v21-latin-regular.woff2") format("woff2"), url("../fonts/rubik-v21-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -35,6 +40,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 600;
+  font-display: fallback;
   src: local(""), url("../fonts/rubik-v21-latin-600.woff2") format("woff2"), url("../fonts/rubik-v21-latin-600.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -43,6 +49,7 @@
   font-family: "Rubik";
   font-style: italic;
   font-weight: 400;
+  font-display: fallback;
   src: local(""), url("../fonts/rubik-v21-latin-italic.woff2") format("woff2"), url("../fonts/rubik-v21-latin-italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -62,6 +69,9 @@ html {
 
 body {
   background-color: #06070d;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 body._lock {
   overflow: hidden;
@@ -74,7 +84,7 @@ body._lock .mobileMenuBackground {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 8;
+  z-index: 11;
 }
 
 * {
@@ -98,11 +108,17 @@ body._lock .mobileMenuBackground {
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
-.header__nav-menu a, .section-title a, .footer__title-text a, .profile-dropdown__Link, .cover-item-gallery__com, .post-tags__tag {
+.header__nav-menu a,
+.section-title a,
+.footer__title-text a,
+.profile-dropdown__Link,
+.cover-item-gallery__com,
+.post-tags__tag,
+.comment__user,
+.header__login-link,
+.header__signin-link {
   text-decoration: none;
 }
 
@@ -318,4 +334,36 @@ body._lock .mobileMenuBackground {
 ._column3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  min-height: 16px;
+  height: 32px;
+  margin: 0;
+  padding: 0 16px;
+  color: #fff;
+  line-height: 32px;
+  background-color: #121420;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button:hover {
+  background-color: #1f2535;
+}
+
+.line {
+  height: 1px;
+  margin: 8px;
+  background-color: rgb(206, 206, 206);
+  overflow: hidden;
 }
