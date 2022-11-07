@@ -3,81 +3,316 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/reset.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-    <!-- Demo styles -->
-    <style>
-        body {
-            background-color: rgb(39, 39, 39);
-        }
+    <link rel="stylesheet" href="https://unpkg.com/lightgallery@2.7.0/css/lightgallery.css" />
 
-        .gallery-cont {
-            display: grid;
-            /* grid-template-rows: 5; */
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            gap: 10px;
-            justify-items: center;
-        }
-
-        .gallery-item {
-            /* width: 100px;
-            height: 100px; */
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.min.css">
 </head>
 
 <body>
-
-    <main class="main">
-        <div class="gallery-cont">
-            <div class="gallery-item">
-                <img src="images/post/im (1).webp">
+    <div class="search-container">
+        <div class="search-container__wrapper">
+            <div class="search-input">
+                <button class="search-input__btn button search-input-icon-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input class="search-input__input" type="text" placeholder="Search..." autocomplete="off"
+                    data-search-input>
+                <div class="search-input__close search-input-icon-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="images/post/im (2).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (3).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (4).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (5).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (6).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (7).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (8).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (9).webp">
-            </div>
-            <div class="gallery-item">
-                <img src="images/post/im (10).webp">
+            <div class="search-content">
+                <div class="tags-list">
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Poetry</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Photo Manipulation</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Resources</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Sculpture</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Stree Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Wallpaper</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Digital</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>illustration</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>fantasy</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Fan Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Fan Fiction</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Fractal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Game Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Manga</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Horror</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Kinky</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>3D</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>18+</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Nude Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Pixel Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Photography</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Poetry</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Photo Manipulation</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Resources</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Sculpture</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Stree Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Wallpaper</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Adoptables</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Anthro</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>animal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Digital</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>illustration</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>fantasy</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Fan Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Fan Fiction</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Fractal</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Game Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Manga</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Horror</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Kinky</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>3D</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>18+</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Nude Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Pixel Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Photography</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Poetry</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Photo Manipulation</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Resources</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Sculpture</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Stree Art</span>
+                    </div>
+                    <div class="tags-list__tag" style="display: none;" data-three-pos>
+                        <span>Wallpaper</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-
-
-
+    </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-container">
+                <button class="search-button button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Поиск</span>
+                </button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="page">
+                <div class="page__wrapper">
+                    <div class="page__items page-items">
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                        <div class="page-items__item"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
 
     <!-- Initialize Swiper -->
-    <script>
+    <!-- <script>
         var swiper = new Swiper(".mySwiper", {
             // loop: true,
             spaceBetween: 10,
@@ -96,28 +331,28 @@
                 swiper: swiper,
             },
         });
-    </script>
+    </script> -->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
     <script src="libs/lazyload.min.js"></script>
     <script src="libs/slick.min.js"></script>
-    <script src="js/device.js"></script>
-    <!-- <script src="js/scripts.js"></script> -->
-    <script>
+    <script src="js/device.js"></script> -->
+    <!-- <script>
         $(".search-bar-container__search-button").on('click', function (e) {
             $(".search-bar-container").toggleClass("_active");
         });
-    </script>
-    <script src="https://unpkg.com/lightgallery@2.7.0/lightgallery.min.js"></script>
+    </script> -->
+    <!-- <script src="https://unpkg.com/lightgallery@2.7.0/lightgallery.min.js"></script>
     <script src="https://unpkg.com/lightgallery@2.7.0/plugins/zoom/lg-zoom.min.js"></script>
     <script src="https://unpkg.com/lightgallery@2.7.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://unpkg.com/lightgallery@2.7.0/plugins/autoplay/lg-autoplay.min.js"></script>
     <script src="https://unpkg.com/lightgallery@2.7.0/plugins/video/lg-video.min.js"></script>
     <script src="https://unpkg.com/lightgallery@2.7.0/plugins/fullscreen/lg-fullscreen.min.js"></script>
-    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/hash/lg-hash.min.js"></script>
-</body>
+    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/hash/lg-hash.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/test.js"></script>
 
 </html>

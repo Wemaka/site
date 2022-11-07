@@ -67,6 +67,20 @@ html {
           box-sizing: inherit;
 }
 
+html.lg-on {
+  overflow: hidden;
+}
+html.lg-on .mobileMenuBackground {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 11;
+}
+
 body {
   background-color: #06070d;
   margin: 0;
@@ -356,9 +370,6 @@ body._lock .mobileMenuBackground {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-.button:hover {
-  background-color: #1f2535;
 }
 
 .line {

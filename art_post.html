@@ -17,6 +17,9 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <!-- Link LightGallery -->
+    <link rel="stylesheet" href="https://unpkg.com/lightgallery@2.7.0/css/lightgallery.css" />
+
     <title>Document</title>
 </head>
 
@@ -71,7 +74,7 @@
                     </div>
                     <div class="header__profile">
                         <!-- для зареганых -->
-                        <!-- <img class="header-profile-avatar" src="images/icon/avatar.png" alt="Аватар">
+                        <img class="header-profile-avatar" src="images/icon/avatar.png" alt="Аватар">
                         <ul class="profile-dropdown">
                             <li><span><a href="#" class="profile-dropdown__Link"><i class="fa-solid fa-user"></i>Мой
                                         профиль</a></span></li>
@@ -91,10 +94,10 @@
                                             class="fa-solid fa-gear"></i>Настройки</a></span></li>
                             <li><span><a href="#" class="profile-dropdown__Link" style="color:red;"><i
                                             class="fa-solid fa-right-from-bracket"></i>Выход</a></span></li>
-                        </ul> -->
+                        </ul>
                         <!-- для не зареганых -->
-                        <a href="login.html" class="button header__login-link">Войти</a>
-                        <a href="register.html" class="button header__signin-link">Регистрация</a>
+                        <!-- <a href="login.html" class="button header__login-link">Войти</a>
+                        <a href="register.html" class="button header__signin-link">Регистрация</a> -->
                     </div>
                 </div>
                 <nav class="header__nav">
@@ -113,119 +116,92 @@
                 <div class="page__wrapper">
                     <div class="post-container">
                         <div class="post-images">
-                            <div class="image-slider swiper" id="product-tab-gallery"
+                            <div id="lightgallery" class="image-slider swiper" id="product-tab-gallery"
                                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
+                                <!-- <button class="dynamic-gallery-button button"></button> -->
                                 <div class="image-slider__wrapper swiper-wrapper static-thumbnails">
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (2).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (2).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (3).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (3).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (4).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (4).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (5).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (5).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (6).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (6).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (7).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (7).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (8).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (8).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (9).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (9).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (10).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (10).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (11).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (11).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (12).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (12).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (13).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (13).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (14).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (14).webp">
+
                                         </div>
                                     </div>
                                     <div class="image-slider__slide swiper-slide">
-                                        <div class="image-slider__image swiper-zoom-container">
-                                            <img data-src="images/post/im (15).webp"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                class="swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
+                                        <div class="image-slider__image">
+                                            <img src="images/post/im (15).webp">
+
                                         </div>
                                     </div>
                                 </div>
@@ -292,14 +268,12 @@
                                 <div class="like-cont">
                                     <div class="post-cont-likes">
                                         <button class="like-btn">
-                                            <div class="_39asK">
-                                                <!-- <i class="fa-regular fa-heart"></i> -->
-                                                <i></i>
-                                                <span class="like-cont-info">
-                                                    <span class="like-cont_-likes-number">10000</span>
-                                                    <!-- <span>Likes</span> -->
-                                                </span>
-                                            </div>
+                                            <!-- <i class="fa-regular fa-heart"></i> -->
+                                            <i class="like-btn__heart"></i>
+                                            <span class="like-cont-info">
+                                                <span class="like-cont__likes-number">10000</span>
+                                                <!-- <span>Likes</span> -->
+                                            </span>
                                         </button>
                                     </div>
                                     <div class="post-cont-com">
@@ -400,7 +374,7 @@
                                 </div>
                             </div>
                             <div class="post-info-comments">
-                                <section>
+                                <section class="post-info-comments__container">
                                     <div class="comments-form">
                                         <!-- <form class="comments-form__form">
                                             <div class="comments-form__container">
@@ -764,13 +738,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/device.js"></script>
-    <!-- <script src="js/scripts.js"></script> -->
     <script src="https://kit.fontawesome.com/65443a9372.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
     <script src="libs/autosize.min.js"></script>
     <script src="js/scripts.js"></script>
-    <!-- <script src="js/test.js"></script> -->
     <!-- input comment -->
     <!-- <script>
         var textarea = document.querySelector('textarea');
@@ -788,16 +760,16 @@
     <script>
         const postInfoActive__com = document.querySelector('.comment-btn')
         postInfoActive__com.addEventListener('click', function (e) {
-            document.querySelector('.comments-form').scrollIntoView({
+            document.querySelector('.post-info-comments').scrollIntoView({
                 behavior: "smooth",
-                block: "center",
+                block: "start",
             });
         })
     </script>
 
     <!-- кнопка сортировки коментов -->
     <script>
-        // const sortBtn = $('.comments-form-sorting')
+        const sortBtn = $('.comments-form-sorting')
         const sortlist = $('.comments-form-sorting__sortlist')
         const sort = $('.comments-form-sorting__sort-btn')
         const animSpeed = 150
@@ -820,8 +792,8 @@
             }
         });
         // при клике на пустое место
-        $(document).mouseup(function (e) {
-            if (!sort.is(e.target) && sortlist.has(e.target).length === 0 && sort.hasClass("_active")) {
+        $(document).on('click', function (e) {
+            if (!e.target.closest('.comments-form-sorting')) {
                 sortlist.animate({
                     height: 'hide',
                     opacity: 0,
@@ -829,6 +801,14 @@
                 sort.removeClass("_active");
                 sortlist.attr("aria-hidden", "true");
             }
+            // if (!sort.is(e.target) && sortlist.has(e.target).length === 0 && sort.hasClass("_active")) {
+            //     sortlist.animate({
+            //         height: 'hide',
+            //         opacity: 0,
+            //     }, animSpeed).slideUp(animSpeed);
+            //     sort.removeClass("_active");
+            //     sortlist.attr("aria-hidden", "true");
+            // }
         });
     </script>
 
@@ -872,7 +852,7 @@
                 InputReplyComment.remove();
             }
 
-            $(document).mouseup(function (e) {
+            $(document).on('click', function (e) {
                 const commentReply = $('.comment-reply')
                 if (!$(currentButton).is(e.target) && $(commentReply).has(e.target).length === 0) {
                     currentButton.classList.remove("_active");
@@ -945,18 +925,22 @@
             }
         });
 
-        $(document).mouseup(function (e) {
-            if (!searchBtn.is(e.target) && searchCont.has(e.target).length === 0 && searchInp.val().length === 0) {
+        $(document).on('click', function (e) {
+            if (!e.target.closest('.search-bar-container') && (searchInp.val().length === 0)) {
                 searchInp.fadeOut(350);
                 searchCont.removeClass('_active');
                 searchBtn.attr('type', 'button');
             }
+            //     if (!searchBtn.is(e.target) && searchCont.has(e.target).length === 0 && searchInp.val().length === 0) {
+            //         searchInp.fadeOut(350);
+            //         searchCont.removeClass('_active');
+            //         searchBtn.attr('type', 'button');
+            //     }
         });
     </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
     <script>
         var swiper = new Swiper(".image-slider-2", {
             // loop: true,
@@ -978,20 +962,15 @@
             // freeMode: true,
             slidesPerView: 1,
             // watchOverflow: true,
-            grabCursor: true,
+            // grabCursor: true,
 
-            preloadImages: false,
-            lazy: {
-                loadOnTransitionStart: true,
-                loadPrevNext: true,
-            },
-            watchSlidesProgress: true,
-            watchSlidesVisibility: true,
-
-            zoom: {
-                maxRatio: 5,
-                minRatio: 1,
-            },
+            // preloadImages: false,
+            // lazy: {
+            //     loadOnTransitionStart: true,
+            //     loadPrevNext: true,
+            // },
+            // watchSlidesProgress: true,
+            // watchSlidesVisibility: true,
 
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -1017,9 +996,72 @@
                 lastSlideMessage: 'это последний слад',
                 paginationBulletMessage: 'перейти к слайду {{index}}',
             }
+
         });
 
     </script>
+
+    <!-- LightGallery -->
+    <script src="https://unpkg.com/lightgallery@2.7.0/lightgallery.min.js"></script>
+    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/autoplay/lg-autoplay.min.js"></script>
+    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/video/lg-video.min.js"></script>
+    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="https://unpkg.com/lightgallery@2.7.0/plugins/hash/lg-hash.min.js"></script>
+    <script>
+
+        const dynamicGallery = document.querySelector(".dynamic-gallery-button");
+        const popup = lightGallery(document.getElementById('lightgallery'), {
+            // dynamic: true,
+            autoplayFirstVideo: false,
+            pager: false,
+            selector: '.image-slider__image img',
+            plugins: [lgZoom, lgAutoplay, lgVideo, lgFullscreen, lgHash],
+            mobileSettings: {
+                controls: true,
+                showCloseIcon: true,
+                download: true,
+                rotate: false
+            },
+        });
+
+        // let itemGallery = document.getElementById('lightgallery');
+        // let itemGalleryImages = itemGallery.getElementsByTagName('img');
+        // let realIndexSlider;
+        // let itemGalleryDynamic = [];
+        // for (let i = 0; i < itemGalleryImages.length; i++) {
+        //     const img = itemGalleryImages[i];
+        //     itemGalleryDynamic[i] = {
+        //         src: img.getAttribute('src'),
+        //         thumb: img.getAttribute('src'),
+        //     };
+        // }
+
+
+        // let itemGalleryLight = lightGallery(itemGallery, {
+        //     dynamic: true,
+        //     autoplayFirstVideo: false,
+        //     pager: false,
+        //     galleryId: "nature",
+        //     plugins: [lgZoom, lgAutoplay, lgVideo, lgFullscreen, lgHash],
+        //     mobileSettings: {
+        //         controls: true,
+        //         showCloseIcon: true,
+        //         download: true,
+        //         rotate: false
+        //     },
+        //     dynamicEl: itemGalleryDynamic,
+        // });
+
+        // itemGallery.addEventListener('click', function (e) {
+        //     realIndexSlider = itemGallery.getElementsByClassName('swiper-slide-active');
+        //     realIndexSlider = Number(realIndexSlider[0].getAttribute('data-swiper-slide-index'));
+        //     itemGalleryLight.openGallery(realIndexSlider);
+        // });
+
+    </script>
+
 </body>
 
 </html>

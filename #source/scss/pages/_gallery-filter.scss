@@ -14,7 +14,9 @@ $color-custom-radio-disable: #0d0f16;
 $color-checkbox-text: #ddd;
 $color-checkbox-enabled: #FAABD3;
 $color-checkbox-indicator-enable: #3ccc7b;
+$color-checkbox-indicator-enable: #30a563;
 $color-checkbox-indicator-disable: #f44336;
+$color-checkbox-indicator-disable: #c9392f;
 
 
 // перевод px в em
@@ -121,11 +123,6 @@ body {
       pointer-events: none;
     }
 
-    .gallery-filter-mobile {
-      /* visibility: hidden;
-      opacity: 0;
-      pointer-events: none; */
-    }
   }
 
   &._touch { 
@@ -272,7 +269,7 @@ body {
     font-size: 16px;
   }
 
-  &__button {
+  &__buttons {
       display: flex;
       position: absolute;
       bottom: 0;
@@ -283,6 +280,10 @@ body {
       border-top: 1px solid #5D5D6C;
       padding-top: 4px;
       padding: 6px 13px;
+
+      & > :hover {
+        background-color: #1f2535;
+      }
   }
 }
 

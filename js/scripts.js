@@ -58,37 +58,13 @@ jQuery(window).on('load', function(){
     // });
 });
 
-function showContent() {
-    // let temp = document.getElementsByTagName("template")[0];
-    // if (temp) {
-    //     let clon = temp.content.cloneNode(true);
-    //     document.body.appendChild(clon);
-    // }
-    const mobileMenus = document.querySelector('#mobile-menus');
-    let cloneMobileMenus = mobileMenus.content.cloneNode(true);
-    document.body.appendChild(cloneMobileMenus);
-}
-
 
 if (document.body.classList.contains('_touch')) {
-    // mobile-menu
-    // пока выключены
-    // showContent()
 
-    // document.querySelector('.popup-content').hidden = false;
-    // mav-menu
-    // rlMenu('.header__mobile-navigation', '#nav-menu-mobile', '.close-ham-menu')
-
-    // фильтры paper_mobile
-    // document.querySelector('.gallery-filter-mobile').hidden = true;
-    // rlMenu('.btn-filter', '.gallery-filter-mobile', '.gallery-sorting-layout__header')
-
-    // btn('.btn-filter', '.gallery-filter-head','.gallery-filter-mobile')
-    // document.querySelector('.gallery-sorting-layout__header').addEventListener("click", function (e) {
-    //     console.log('click')
-    // });
-
-    // document.querySelector('.gallery-sorting').hidden = true;
+    // profile-menu
+    $(".header-profile-avatar").on('click', function (e) {
+        rlMenu('#profile-menu-mobile', '.close-ham-menu-2');
+    });
 
 } else {
 
@@ -97,11 +73,14 @@ if (document.body.classList.contains('_touch')) {
         $(this).toggleClass('_active');
     });
 
-    $(document).on('mouseup', function (e) {
-        let s = $('.header__profile._active');
-        if (!s.is(e.target) && s.has(e.target).length === 0) {
-            s.removeClass('_active');
+    $(document).on('click', function (e) {
+        if (!e.target.closest('.profile-dropdown') && !e.target.closest('.header__profile')) {
+            $('.header__profile._active').removeClass('_active');
         }
+        // let s = $('.header__profile._active');
+        // if (!s.is(e.target) && s.has(e.target).length === 0) {
+        //     s.removeClass('_active');
+        // }
     });
 }
 
@@ -145,54 +124,17 @@ function rlMenu(rlmenu, close) {
 $(".header__mobile-navigation").on('click', function (e) {
     rlMenu('#nav-menu-mobile', '.close-ham-menu')
 });
-// profile-menu
-$(".header-profile-avatar").on('click', function (e) {
-    rlMenu('#profile-menu-mobile', '.close-ham-menu-2');
-});
-// фильтры
-$(".btn-filter").on('click', function (e) {
-    rlMenu('.gallery-filter-mobile', '.gallery-filter-head');
-});
-
-function btn(button, closebtn, clsname) {
-    $(document).ready(function () {
-        $(button).click(function () {
-            $(clsname).addClass('_active');
-        });
-    });
-
-    $(document).ready(function () {
-        $(closebtn).click(function () {
-            $(clsname).removeClass('_active');
-        });
-    });
-}
 
 
-// topics
-btn('.gallery-sorting-submenu', '.gallery-sorting-layout__header','.gallery-search-layout')
-// tags
-btn('.gallery-sorting-submenu-2', '.gallery-sorting-layout__header','.gallery-search-layout-2')
-
-
-// $(document).ready(function () {
-//     $('.sorting-container__sorting').click(function (e) {
-//         // $('.like-button').toggle('_active');
-//         e.currentTarget.classList.toggle('_active');
-
-//         if (e.currentTarget.classList.contains('_active')) {
-//             let sorting = document.querySelector('.sorting-container__sorting')
-//             let title = document.createElement('div')
-//             title.className = 'title'
-//             title.innerHTML = '<h1>text</h1>'
-//             sorting.appendChild(title)
-//         } else {
-//             let title = document.querySelector('.title')
-//             title.remove()
-//         }
+// function btn(button, closebtn, clsname) {
+//     $(button).click(function () {
+//         $(clsname).addClass('_active');
 //     });
-// });
 
+//     $(closebtn).click(function () {
+//         $(clsname).removeClass('_active');
+//     });
+// }
 
 // like button
 $(".like-btn").on('click', function (e) {
@@ -201,16 +143,6 @@ $(".like-btn").on('click', function (e) {
 });
 
 
-// checkbox
-// let boxes = document.querySelectorAll('.checkbox');
-// if (boxes) {
-//     for (let index = 0; index < boxes.length; index++) {
-//         const box = boxes[index];
-//         box.addEventListener("click", function (e) {
-//             box.classList.toggle('_active');
-//         });
-//     }
-// }
 $(".checkbox").on('click', function (e) {
     var context = $(e.currentTarget);
     let value = context.children('.dissabled-and-enabled').val();
