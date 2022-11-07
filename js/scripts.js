@@ -44,6 +44,7 @@ jQuery(window).on('load', function(){
             container.masonry({
                 itemSelector: '.item-masonry',
                 // columnWidth: sizer,
+                // gutter: 10,
                 percentPosition: true,
                 transitionDuration: '0.2s',
             })
@@ -83,8 +84,6 @@ if (document.body.classList.contains('_touch')) {
         // }
     });
 }
-
-
 
 function rlMenu(rlmenu, close) {
     // const button = document.querySelector(btn)
@@ -156,3 +155,22 @@ $(".checkbox").on('click', function (e) {
     }
 });
 
+
+let lastScroll = 0;
+const defaultOffset = 200;
+const header = document.querySelector('.header');
+
+const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const containHide = () => header.classList.contains('_hide-header');
+
+window.addEventListener('scroll', () => {
+    if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+        // scroll down
+        header.classList.add('_hide-header');
+    } else if (scrollPosition() < lastScroll && containHide()) {
+        // scroll up
+        header.classList.remove('_hide-header');
+    }
+
+    lastScroll = scrollPosition();
+});

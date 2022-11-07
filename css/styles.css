@@ -86,6 +86,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  padding-top: 100px;
 }
 body._lock {
   overflow: hidden;
@@ -99,6 +100,11 @@ body._lock .mobileMenuBackground {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 11;
+}
+@media (max-width: 991px) {
+  body {
+    padding: 54px 0;
+  }
 }
 
 * {
