@@ -1155,37 +1155,6 @@
         });
     </script>
 
-    <!-- кнопка поиска -->
-    <script>
-        const searchCont = $('.search-bar-container')
-        const searchBtn = $('.search-bar-container__search-button')
-        const searchInp = $('.search-bar-container__search-input')
-        searchInp.fadeOut();
-        searchBtn.on('click', function (e) {
-            if (searchBtn.attr('type') == 'submit') {
-                searchBtn.submit();
-            } else {
-                searchInp.fadeIn(350).focus();
-                searchCont.addClass('_active');
-                searchBtn.attr('type', 'submit');
-                return false;
-            }
-        });
-
-        $(document).on('click', function (e) {
-            if (!e.target.closest('.search-bar-container') && (searchInp.val().length === 0)) {
-                searchInp.fadeOut(350);
-                searchCont.removeClass('_active');
-                searchBtn.attr('type', 'button');
-            }
-            //     if (!searchBtn.is(e.target) && searchCont.has(e.target).length === 0 && searchInp.val().length === 0) {
-            //         searchInp.fadeOut(350);
-            //         searchCont.removeClass('_active');
-            //         searchBtn.attr('type', 'button');
-            //     }
-        });
-    </script>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
