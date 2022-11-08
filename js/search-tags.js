@@ -34,24 +34,25 @@ $('.search-button').click(function() {
 // желательно чтобы кнопки имели общий родитель который имеет селетор или id
 function threeBtn(btnName) {
   let parentBtn = document.querySelector(btnName).parentNode
-  let arrayBtn = document.querySelectorAll(btnName)
-  arrayBtn.forEach(function(e) {
-    e.dataset.threePos = 0
-  });
+  // let arrayBtn = document.querySelectorAll(btnName)
 
   parentBtn.addEventListener('click', function(e) {
     let tar = e.target.closest(btnName)  
     if (tar) {
-      let valuebtn = tar.getAttribute("data-three-pos");
-      if (valuebtn == '0') {
-        // btn.attr('data-three-pos', '1')
-        tar.dataset.threePos = 1
-      } else if (valuebtn == '1') {
-        // btn.attr('data-three-pos', '-1')
-        tar.dataset.threePos = -1
-      } else if (valuebtn == '-1') {
-        // btn.attr('data-three-pos', '0')
-        tar.dataset.threePos = 0
+      let valueinp = tar.querySelector('.three-pos-inp').value;
+      console.log(valueinp)
+      if (valueinp == '0') {
+        tar.classList.add('_enabled');
+        tar.querySelector('.three-pos-inp').value = '1';
+        
+      } else if (valueinp == '1') {
+        tar.classList.add('_disabled');
+        tar.classList.remove('_enabled');
+        tar.querySelector('.three-pos-inp').value = '-1';
+
+      } else if (valueinp == '-1') {
+        tar.classList.remove('_disabled');
+        tar.querySelector('.three-pos-inp').value = '0';
       }
     }
   });
@@ -102,8 +103,8 @@ class Search {
 
   tagSort(array) {
     const sortArrayTags = [...array].sort(function(x, y) {
-      x = x.getAttribute("data-three-pos")
-      y = y.getAttribute("data-three-pos")
+      x = x.querySelector('.three-pos-inp').value
+      y = y.querySelector('.three-pos-inp').value
       return (!(x=='1' && y=='1') && x=='1' || (x=='-1' && y=='0'))? 1: -1
     });
     sortArrayTags.forEach( function (e) {
@@ -124,13 +125,14 @@ class Search {
     // let textInp = document.querySelector(this.inputName).value.trim().toLowerCase();
 
     array.forEach(function(e) {
-      let valuebtn = e.getAttribute("data-three-pos");
+      let valueinp = e.querySelector('.three-pos-inp').value;
+      console.log(valueinp)
   
       if (this.searchForMatches(e, textInp)) {
         e.getElementsByTagName('span')[0].innerHTML = this.inserMark(e.innerText, e.innerText.toLowerCase().search(textInp), textInp.length);
         this.show(e);
       } else {
-        if (valuebtn=='0') {
+        if (valueinp=='0') {
           this.hide(e);
         };
         e.getElementsByTagName('span')[0].innerHTML = e.innerText;
@@ -148,7 +150,7 @@ class Search {
         
         // скрыть кнопку если строка пустая и кнопка пасивна
         if (!this.searchForMatches(e.target.closest(this.itemName), textInp)) {
-          if (e.target.closest(this.itemName).getAttribute("data-three-pos") == '0') {
+          if (e.target.closest(this.itemName).querySelector('.three-pos-inp').value == '0') {
             this.hide(e.target.closest(this.itemName))
           }
         }

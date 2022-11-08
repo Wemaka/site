@@ -1,23 +1,23 @@
 // slider gallery
-$(document).ready(function () {
-    let slider = document.querySelector('.slider');
-    if (slider) {
-        $('.slider').slick({
-            dots: true,
-            infinite: true,
-            speed: 100,
-            slidesToShow: 1,
-            cssEase: 'ease',
-            adaptiveHeight: false,
-            draggable: false,
-            touchMove: false,
-            waitForAnimate: false,
-            variableWidth: false,
-            touchThreshold: 7,
-            // appendArrows: $('.arrow-btn'),
-        });
-    };
-})
+// $(document).ready(function () {
+//     let slider = document.querySelector('.slider');
+//     if (slider) {
+//         $('.slider').slick({
+//             dots: true,
+//             infinite: true,
+//             speed: 100,
+//             slidesToShow: 1,
+//             cssEase: 'ease',
+//             adaptiveHeight: false,
+//             draggable: false,
+//             touchMove: false,
+//             waitForAnimate: false,
+//             variableWidth: false,
+//             touchThreshold: 7,
+//             // appendArrows: $('.arrow-btn'),
+//         });
+//     };
+// })
 
 // external js: masonry.pkgd.js
 // $(document).ready(function () {

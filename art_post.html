@@ -321,7 +321,7 @@
                     </div>
                     <div class="header__profile">
                         <!-- для зареганых -->
-                        <img class="header-profile-avatar" src="images/icon/avatar.png" alt="Аватар">
+                        <!-- <img class="header-profile-avatar" src="images/icon/avatar.png" alt="Аватар">
                         <ul class="profile-dropdown">
                             <li><span><a href="#" class="profile-dropdown__Link"><i class="fa-solid fa-user"></i>Мой
                                         профиль</a></span></li>
@@ -341,10 +341,10 @@
                                             class="fa-solid fa-gear"></i>Настройки</a></span></li>
                             <li><span><a href="#" class="profile-dropdown__Link" style="color:red;"><i
                                             class="fa-solid fa-right-from-bracket"></i>Выход</a></span></li>
-                        </ul>
+                        </ul> -->
                         <!-- для не зареганых -->
-                        <!-- <a href="login.html" class="button header__login-link">Войти</a>
-                        <a href="register.html" class="button header__signin-link">Регистрация</a> -->
+                        <a href="login.html" class="button header__login-link">Войти</a>
+                        <a href="register.html" class="button header__signin-link">Регистрация</a>
                     </div>
                 </div>
                 <nav class="header__nav">
@@ -662,7 +662,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <form class="comments-form__form">
+                                        <form id="input-comments-form">
                                             <div class="comments-form__pseudo-form">
                                                 Написать коментарий
                                             </div>
@@ -1066,9 +1066,9 @@
         const InputReplyComment = document.createElement('div');
         InputReplyComment.classList.add("comment-reply");
         InputReplyComment.innerHTML =
-            `<form>
+            `<form id="reply-reply">
                 <div class="comment-reply__input">
-                    <textarea class="comments-form__input-comment" required></textarea>
+                    <textarea class="comments-form__input-comment" name="reply-reply" required></textarea>
                 </div>
                 <div class="comment-reply__controls">
                     <div class="comment-reply__send">
@@ -1127,7 +1127,7 @@
         InputNewComment.innerHTML =
             `<div class="comments-form__input"
                     aria-placeholder="Введите ваш комментарий">
-                    <textarea class="comments-form__input-comment" required></textarea>
+                    <textarea class="comments-form__input-comment" name="input-comments-form" required></textarea>
                 </div>
                 <div class="comments-form__controls">
                     <div class="comment-form__send">
@@ -1139,9 +1139,9 @@
         $(".comments-form__pseudo-form").on('click', function (e) {
             // const firstlone = template0.content.cloneNode(true);
             document.querySelector('.comments-form__pseudo-form').remove();
-            document.querySelector('.comments-form__form').append(InputNewComment);
+            document.getElementById('input-comments-form').append(InputNewComment);
             // document.querySelector('.comment-form__input > div').focus();
-            document.querySelector('.comments-form__input > textarea').focus();
+            document.querySelector('.comments-form__input-comment').focus();
 
             // var textarea = document.querySelector('.comments-form__input-comment');
             // textarea.addEventListener('keydown', function (e) {
@@ -1151,7 +1151,7 @@
             //         e.target.style.height = `${e.target.scrollHeight}px`;
             //     }, 0);
             // });
-            autosize($('.comments-form__input > textarea'));
+            autosize($('.comments-form__input-comment'));
         });
     </script>
 
@@ -1172,7 +1172,7 @@
         });
         // основной слайдер
         var swiper2 = new Swiper(".image-slider", {
-            loop: true,
+            // loop: true,
             // loopedSlides: 1,
             spaceBetween: 10,
             // freeMode: true,

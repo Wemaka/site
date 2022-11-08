@@ -6,17 +6,6 @@ $color-white: #fff;
 $color-gray: #aaa;
 $color-border-gray: #3d3d45;
 $color-filter-hover: #1f2535;
-$color-filter-background: #121420;
-$color-search-filter-title: #868e96;
-$color-search-filter-title-background: rgba(251, 251, 252, 0.035);
-$color-custom-radio-enable: #FAABD3;
-$color-custom-radio-disable: #0d0f16;
-$color-checkbox-text: #ddd;
-$color-checkbox-enabled: #FAABD3;
-$color-checkbox-indicator-enable: #3ccc7b;
-$color-checkbox-indicator-enable: #30a563;
-$color-checkbox-indicator-disable: #f44336;
-$color-checkbox-indicator-disable: #c9392f;
 
 
 // перевод px в em
@@ -154,7 +143,7 @@ border-radius: 4px; */
   justify-content: center;
 
   >i {
-    color: $color-pink;
+    color: pink;
   }
 
   &:hover {
@@ -242,12 +231,6 @@ border-radius: 4px; */
   overflow: auto;
   text-align: center;
   height: calc(100% - 60px);
-  // -ms-overflow-style: none;
-  // scrollbar-width: none;
-
-  // &::-webkit-scrollbar {
-  //     display: none;
-  // }
 
   &__tag {
       display: inline-block;
@@ -276,9 +259,17 @@ border-radius: 4px; */
           font-size: 14px;
       }
   }
+
+  &__checkbox {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
 }
 
-[data-three-pos='1'] {
+
+._enabled {
   background: $color-enable;
   border:2px solid $color-enable;
   &:hover {
@@ -286,7 +277,7 @@ border-radius: 4px; */
   }    
 }
 
-[data-three-pos='-1'] {
+._disabled {
   background: $color-disable;
   border:2px solid $color-disable;
   &:hover {
